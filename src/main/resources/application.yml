@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/class?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: postgres
+    password: theo123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+
+app:
+  jwtSecret: secret
+  jwtExpirationInMs: 3600000
+
+cors:
+  allowedOrings: '*'
